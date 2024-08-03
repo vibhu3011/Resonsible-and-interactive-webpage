@@ -1,0 +1,508 @@
+/* Basic Reset */
+:root {
+    --swiper-theme-color: #e5e5e5 !important;
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.8;
+    background-image: url("mirzapur.jpeg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow-x: hidden;
+    
+}
+
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    overflow: visible;
+}
+
+/* xs */
+@media (min-width: 475px) {
+    .container {
+        max-width: 475px;
+    }
+}
+
+/* sm */
+@media (min-width: 640px) {
+    .container {
+        max-width: 640px;
+    }
+}
+
+/* md */
+@media (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1024px;
+    }
+}
+
+/* xl */
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1280px;
+    }
+}
+
+/* 2xl */
+@media (min-width: 1536px) {
+    .container {
+        max-width: 1536px;
+    }
+}
+
+header {
+    display: flex;
+    flex-direction: row; /* Stack items horizontally */
+    justify-content: space-between; /* Space out items */
+    align-items: center;
+    padding: 10px 20px;
+    color: white;
+    position: fixed; /* Fixed positioning to stick to the top */
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+    
+    
+
+
+header .back-arrow {
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    
+    
+}
+nav {
+    
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+    flex-direction: row;    
+}
+
+nav ul li {
+    margin: 0 20px;
+    
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    text-align: center;
+
+}
+
+nav ul li a.active {
+    color: #e50914;
+}
+
+.menu-icon {
+    font-size: 1.5rem;
+    display: none;
+}
+
+.hero {
+    margin-top: 60px; /* Adjust this value to match the height of the fixed nav */
+    text-align: center;
+    color: white;
+    background: url('your-background-image.jpg') no-repeat center center/cover;
+    min-height: 60vh; /* Use min-height instead of height */
+    position: relative;
+    display: flex;
+    justify-content: flex-end; /* Align content to the right */
+    align-items: center;
+
+    
+}
+
+.hero .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('path/to/your/image.jpg') no-repeat center center/cover;
+    filter: brightness(0.5);
+}
+
+.hero .content {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    
+}
+
+.hero h1 {
+    font-size: 3rem;
+    
+    font-family: 'Forum';
+    color:#ff4233;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-family: 'Forum';
+    color:#ff4233;
+}
+
+.hero p {
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+}
+
+.hero .buttons button {
+    padding: 20px 40px;
+    font-size: 0.8rem;
+    border: none;
+    margin-right: 10px;
+    cursor: pointer;
+    
+}
+
+.hero .buttons .resume {
+    background-color: #e50914;
+    color: #fff;
+    
+}
+
+.hero .buttons .my-list {
+    background-color: #333;
+    color: #fff;
+    border: 2px solid #fff;
+    
+}
+
+.buttons button {
+    background-color: #e50914;
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+.episode-info {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    color: white;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.episode-title {
+    text-align: left;
+}
+
+.episode-duration {
+    text-align: right;
+}
+
+.episodes {
+
+    padding: 20px;    /* Ensure padding and border are included in width/height */
+}
+
+.swiper-container {
+    width: 100%;
+    height: 200px;
+}
+
+.swiper-wrapper {
+    display: flex;
+    
+}
+
+
+.episode img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.episode .info {
+    position: absolute;
+    margin-right: 10px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-align: center;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    display: flex; /* Enables flexbox layout */
+    justify-content: space-between; /* Distributes space between title and minutes */
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden; 
+}
+
+.episode .info p {
+    margin: 0;
+    padding: 0;
+    
+}
+
+.episode.active img {
+    border: 2px solid #e50914;
+}
+
+
+.swiper-slide {
+    text-align:center;
+    font-size: 18px;
+    
+    display: flex;
+    justify-content:space-between;
+    align-items:start;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .swiper-slide img {
+    border-radius: 5px;
+    max-width: 18rem;
+    cursor: grab;
+  }
+
+  
+  
+  .swiper-slide img:active {
+    cursor: grabbing;
+  }
+  
+  .swiper-slide:hover {
+    transform: scale(1.1);
+    transition: all 300ms ease-in-out;
+    transition-delay: 300ms;
+    z-index: 1;
+  }
+  
+  .swiper-slide:hover img {
+    transition-delay: 300ms;
+    box-shadow: 0 0 5px 1px rgba(0,0,0,0.5);
+  }
+
+  .swiper-button-next,
+.swiper-button-prev {
+    color: black;
+}
+
+.card {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #444;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 1.2rem;
+}
+
+.card-text {
+    font-size: 0.9rem;
+}
+
+  
+ /* Media Queries for Responsiveness */
+@media screen and (max-width: 1200px) {
+    nav ul {
+        justify-content: center; /* Center items for larger screens */
+    }
+    
+    nav ul li {
+        margin: 0 15px; /* Adjust spacing */
+    }
+    
+    nav ul li a {
+        font-size: 1.1rem; /* Adjust font size */
+    }
+}
+
+@media screen and (max-width: 992px) {
+    nav ul {
+        flex-direction: row; /* Stack items vertically on medium screens */
+        align-items: center; 
+        ;/* Center items */
+    }
+    
+    nav ul li {
+        margin: 0 20px; /* Space between items in column layout */
+    }
+    
+    nav ul li a {
+        text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem; /* Font size for links */
+    text-align: center;
+    display: block;  /* Adjust font size */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: row; /* Stack items vertically on small screens */
+        align-items: center; /* Center items */
+    }
+    
+    nav ul li {
+        margin: 8px 0; /* Space between items */
+    }
+    
+    nav ul li a {
+        font-size: 0.9rem; /* Adjust font size */
+    }
+}
+
+@media screen and (max-width: 576px) {
+    nav ul {
+        flex-direction: row; /* Stack items vertically on extra-small screens */
+        align-items: center; /* Center items */
+    }
+    
+    nav ul li {
+        margin: 5px 0; /* Space between items */
+    }
+    
+    nav ul li a {
+        font-size: 0.8rem; /* Adjust font size */
+    }
+}
+
+  html {
+    scroll-behavior: smooth;
+   }
+   
+   body {
+    margin: 0;
+    background-color: #000;
+   }
+   
+   h1 {
+    font-family: Arial;
+    color: red;
+    text-align: center;
+   }
+   
+   .wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 100%);
+    overflow: hidden;
+    scroll-behavior: smooth;
+   }
+   .wrapper section {
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    margin: 20px 0;
+   }
+   .wrapper section .item {
+    padding: 0 2px;
+    transition: 250ms all;
+   }
+   .wrapper section .item:hover {
+    margin: 0 40px;
+    transform: scale(1.2);
+   }
+   .wrapper section a {
+    position: absolute;
+    color: #fff;
+    text-decoration: none;
+    font-size: 6em;
+    background: black;
+    width: 80px;
+    padding: 20px;
+    text-align: center;
+    z-index: 1;
+   }
+   .wrapper section a:nth-of-type(1) {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
+   }
+   .wrapper section a:nth-of-type(2) {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, black 100%);
+   }
+   
+   @media only screen and (max-width: 600px) {
+    a.arrow__btn {
+    display: none;
+    }
+   }
+
+   .season-label {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    font-size: 1.2em;
+    margin: 20px 0; /* Add vertical margin to create space between the labels */
+    align-content: center;
+}
+
+
+
